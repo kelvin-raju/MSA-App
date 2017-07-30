@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:QuoteSaver"
+             x:Class="QuoteSaver.MainPage">
+
+  <ContentPage.ToolbarItems>
+    <ToolbarItem x:Name="newPage" Icon="plus.png" Text="+" />
+  </ContentPage.ToolbarItems>
+
+  <ListView x:Name="QuoteList" HasUnevenRows="True">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell Height="75">
+          <StackLayout Margin="10, 10, 10, 10" Orientation="Vertical" >
+            <Label Text="{Binding quote}" TextColor="Black" FontSize="14" HorizontalOptions="Start" />
+            <Label Text="{Binding author}" TextColor="Gray" FontSize="11" HorizontalOptions="End" />
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>
